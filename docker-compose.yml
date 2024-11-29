@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  app: #whatsappMensajes
+    build: .
+    ports:
+      - "8081:80"  # Expon el puerto 8081 en tu máquina
+    volumes:
+      - "C:/Users/hector/Desktop/Proyectos/API-mensajesW:/var/www/html"  # Sincroniza la carpeta del proyecto con la del contenedor
+    restart: always
+  
