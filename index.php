@@ -219,7 +219,7 @@
         </div>
     </div>
 
-    <footer class="bg-primary text-white mt-5 py-4">
+    <footer class="bg-primary text-white mt-5 py-4"style="background-color: #00469c;">
         <div class="container">
             <div class="row align-items-center">
 
