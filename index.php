@@ -219,6 +219,46 @@
         </div>
     </div>
 
+    <footer class="bg-primary text-white mt-5 py-4">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <!-- Información inicial con logo -->
+                <div class="col-md-4 d-flex align-items-center">
+                    <div class="text-center me-3">
+                        <img src="imagenes/qr-blanco2.png" alt="Logo QR Hospital" class="img-fluid" style="max-width: 110px;">
+                    </div>
+                    <div>
+                        <p class="mb-0"><strong>Desarrollado por: </strong>Informática de Canelones</p>
+                        <p class="mb-0"><strong>Eduardo Morales</strong><br>Enc. Informático</p>
+                        <p class="mb-0"><strong>Héctor Latorre</strong><br>Informático</p>
+                    </div>
+                </div>
+                <!-- Nueva información y logo -->
+                <div class="col-md-6 d-flex align-items-center">
+                    <div class="text-center me-3">
+                        <img src="imagenes/SoloDibujo.png" alt="Logo Hospital" class="img-fluid" style="max-width: 150px;">
+                    </div>
+                    <div>
+                        <p class="mb-0">
+                            <strong>Hospital de Canelones</strong><br>
+                            Dpto. Informática<br>
+                            Dr. Gerson Taube Nº1073<br>
+                            Canelones, Canelones<br>
+                            4332 3288 int. 220
+                        </p>
+                    </div>
+                </div>
+                <!-- Logo Región Sur -->
+                <div class="col-md-2 text-center">
+                    <div style="background-color: white; padding: 5px; border-radius: 5px; display: inline-block;">
+                        <img src="imagenes/RegionSur.png" alt="Logo Región Sur" class="img-fluid" style="max-width: 100px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <!-- Cargar jQuery desde CDN -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK" crossorigin="anonymous"></script>
     <script src="script.js"></script>
