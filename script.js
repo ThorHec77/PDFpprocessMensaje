@@ -127,5 +127,23 @@ function confirmarEnvio() {
     });
 }
 
+function copiarTexto(elementId) {
+    const texto = document.getElementById(elementId).textContent;
 
+    navigator.clipboard.writeText(texto)
+        .then(() => {
+            mostrarNotificacion("Texto copiado al portapapeles.");
+        })
+        .catch(err => console.error("Error al copiar el texto:", err));
+}
 
+function mostrarNotificacion(mensaje) {
+    const notificacion = document.getElementById("notificacion");
+    notificacion.textContent = mensaje;
+    notificacion.style.display = "block";
+
+    // Ocultar la notificación después de 3 segundos
+    setTimeout(() => {
+        notificacion.style.display = "none";
+    }, 3000);
+}

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XLSX para SMS</title>
+    <title>XLSX mensajes</title>
     <link rel="icon" href="/imagenes/mensajes.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
@@ -14,6 +14,11 @@
         <div class="container-fluid">
             <a class="navbar-brand" href="https://hospitaldecanelones.com/">
                 <img src="/imagenes/logo-nuevo-hc.png" width="120" height="38" alt="Hospital de Canelones" class="img-fluid" style="border: 1px solid #fff; background-color: #fff; border-radius: 5px;">
+            </a>
+                    <!-- Botón Manual -->
+            <a href="/manual/Manual XLSX.pdf" target="_blank" class="btn btn-light ms-3">
+                <img src="/imagenes/Manual.png" width="30" alt="Manual" class="img-fluid" style="border: 1px solid #fff; background-color: #fff; border-radius: 5px;">
+                Abrir Manual
             </a>
             <a class="navbar-brand" href="https://www.asse.com.uy/home">
                 <img src="/imagenes/asse_capacita.png" width="150" height="38" alt="ASSE Capacita" class="img-fluid" style="border: 1px solid #fff; background-color: #fff; border-radius: 5px;">
@@ -139,7 +144,6 @@
             </div>
 
 
-
     <!-- Modal de confirmación -->
     <div id="modalAviso" class="modal" style="display: none;">
         <div class="modal-content">
@@ -202,11 +206,18 @@
         <!-- Contenedor de los dos divs -->
         <div class="row">
             <!-- Div del lado izquierdo con el mensaje de respuesta automática -->
+             <!-- Contenedor de la notificación -->
+            <div id="notificacion" class="notificacion" style="display: none; position: fixed; bottom: 2px; right: 2px; background-color: #4caf50; color: white; padding: 10px 20px; border-radius: 5px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); z-index: 1000;">
+                Texto copiado al portapapeles.
+            </div>
             <div class="col-md-6 d-flex align-items-center">
                 <div>
-                    <p class="text-center bg-light p-3 border rounded" style="background-color: #d4f1f9; border-radius: 5px;">
-                        "Por este medio no se recibirán respuestas. Si desea comunicarse, por favor hágalo llamando al teléfono 4332-3296. Gracias."
+                    <p id="mensajeRespuesta" class="text-center bg-light p-3 border rounded" style="background-color: #d4f1f9; border-radius: 5px;">
+                        Por este medio no se recibirán respuestas. Si desea comunicarse, por favor hágalo llamando al teléfono 4332-3296. Gracias.
                     </p>
+                    <div class="text-center mt-2">
+                        <button class="btn btn-primary" onclick="copiarTexto('mensajeRespuesta')">Copiar texto</button>
+                    </div>
                 </div>
             </div>
 
@@ -218,6 +229,7 @@
             </div>
         </div>
     </div>
+
 
     <footer class="bg-custom text-white mt-5 py-4">
         <div class="container">
@@ -258,6 +270,7 @@
             </div>
         </div>
     </footer>
+
 
     <!-- Cargar jQuery desde CDN -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK" crossorigin="anonymous"></script>
